@@ -1,7 +1,8 @@
 import("soem_master")
 import("rtt_soem_robotiq")
+import("soem_beckhoff_drivers")
+import("rtt_ros")
 
-import("rtt_rosnode") // makes this process a ROS node
 
 loadComponent("Master","soem_master::SoemMasterComponent")
 Master.ifname = "eth0" 
