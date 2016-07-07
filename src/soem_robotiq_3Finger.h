@@ -29,8 +29,9 @@
 #ifndef SOEM_Robotiq_3Finger_H
 #define SOEM_Robotiq_3Finger_H
 
+#include <soem/ethercattype.h>
 #include <soem_master/soem_driver.h>
-#include <soem_robotiq_drivers/RobotiqMsg.h>
+#include <rtt_soem_robotiq/RobotiqMsg.h>
 #include <rtt/Port.hpp>
 #include <bitset>
 
@@ -116,9 +117,9 @@ namespace soem_robotiq_drivers{
   private:
 	 int message_size;
 
-    RobotiqMsg status_msg;
+	rtt_soem_robotiq::RobotiqMsg status_msg;
     std::bitset<MESSAGE_SIZE> status_bits;
-	RTT::OutputPort<RobotiqMsg> status_port;
+	RTT::OutputPort<rtt_soem_robotiq::RobotiqMsg> status_port;
 
     std::bitset<MESSAGE_SIZE> input_bits;
     std::bitset<MESSAGE_SIZE> fault_bits;

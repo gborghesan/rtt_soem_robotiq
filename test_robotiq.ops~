@@ -4,7 +4,7 @@ import("rtt_soem_robotiq")
 import("rtt_rosnode") // makes this process a ROS node
 
 loadComponent("Master","soem_master::SoemMasterComponent")
-Master.ifname = "eth0" 
+Master.ifname = "eth1" 
 
 Master.setPeriod(0.001)
 Master.configure()

@@ -331,7 +331,8 @@ namespace
 {
 soem_master::SoemDriver* createSoemRobotiq(ec_slavet* mem_loc)
 {
-    return new SoemRobotiq(mem_loc);
+	std::cout<<"createSoemRobotiq CALLED"<<std::endl;
+	return new SoemRobotiq(mem_loc);
 }
 const bool registered0 =
         soem_master::SoemDriverFactory::Instance().registerDriver("netX",
